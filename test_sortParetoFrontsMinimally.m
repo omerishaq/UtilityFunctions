@@ -1,5 +1,5 @@
 clear all
 close all
 
-Data = rand(1000,2);
+Data = rand(200,2);
 ReturnData = sortParetoFrontsMinimally( Data );
