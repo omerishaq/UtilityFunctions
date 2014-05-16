@@ -1,16 +1,18 @@
-function [ output_args ] = sortParetoFrontsMinimally( Data )
+function [struct_F, k] = sortParetoFrontsMinimally( Data )
 
     n_Datapoints = size(Data,1);
     n_Dims = size(Data,2);
     
     dummy_struct.n = 0;
     dummy_struct.S = [];
+%     struct_Aux(n_Datapoints) = dummy_struct;
     for k = 1:n_Datapoints
         struct_Aux(k) = dummy_struct;
     end
     
     clear dummy_struct
     dummy_struct.F = [];
+%     struct_F(n_Datapoints) = dummy_struct;
     for k = 1:n_Datapoints
         struct_F(k) = dummy_struct;
     end
