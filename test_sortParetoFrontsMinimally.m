@@ -1,7 +1,8 @@
 clear all
 close all
 
-Data = rand(500,2);
+rng('default');
+Data = rand(200,2);
 [ReturnData, k] = sortParetoFrontsMinimally( Data );
 
 figure; hold on;
